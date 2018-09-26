@@ -35,6 +35,35 @@
 - Curiosidade: https://modernizr.com/download?setclasses
 
 
+## 16 - 
+# Usuario
+- clica em uma cor 
+- muda a cor do cartão clicado
+
+# Dev
+- adicionar um evento de click, no botão (bolinha colorida)
+
+## 17 - Desafio!!!1!1!
+- Refazer o código do remover, com delegate
+
+## 18 - Criar um cartão
+### Usuario
+- Digita alguma coisa
+- Clica para salvar/Ou aperta enter (desafio 1 maroto hahaha)
+    - se ele nao digitar nada?
+    - Verificar se tem conteudo ou não
+- cartão aparece onde?
+    - no inicio da listagem de cartões
+
+### Dev
+- Usuário clica
+
+- Desafio 2: [Contador de caracteres]
+
+
+
+
+
 
 ## Dicas para a vida
 - Quando JS roda:
@@ -55,7 +84,8 @@
     - Linters:
         - https://standardjs.com/
         - https://github.com/airbnb/javascript
-
+- Tabindex:
+    - https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/tabindex
 ## Dicas CSS:
 - Flexbox: https://flexboxfroggy.com/
 - (Marcobruno) Série sobre posicionamento com CSS: https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x
