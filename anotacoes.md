@@ -140,3 +140,6 @@
 ## Colocando o site no ar
 - Copia a pasta dist e cola no servidor
 3 - Para colocar o site no ar, suba a pasta "./dist"
+
+## Dicas sobre Testes
+- Teste automatizado de fluxos do usuário: https://www.cypress.io/
