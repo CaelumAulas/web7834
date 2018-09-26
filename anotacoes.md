@@ -86,6 +86,14 @@
         - https://github.com/airbnb/javascript
 - Tabindex:
     - https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/tabindex
+- Dribble: https://dribbble.com/
+- Material Design: https://getmdl.io/templates/index.html
+
+
+## Dica Master: 
+- Não surtar mais com aprender novas versões: https://github.com/tc39/
+- Lugar para se atualizar sobre browsers: https://www.youtube.com/user/ChromeDevelopers/videos
+
 ## Dicas CSS:
 - Flexbox: https://flexboxfroggy.com/
 - (Marcobruno) Série sobre posicionamento com CSS: https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x
@@ -96,3 +104,39 @@
 - Alt + Setas = Movimenta as linhas loucamente
 - Alt + Shift + Setas = Duplica as linhas loucamente (Pesquisar esse aqui)
 - Ctrl + K + C (Cmd + /) = Comenta várias linhas 
+
+
+
+
+## JavaScript o que é?
+
+- Linguagem JavaScript:
+    - https://babeljs.io/
+    - ECMA 262
+- Funções que tem no Browser
+    - Manipulação de Elementos e **funções** que o browser nao tem
+- Funções que tem no Node
+    - lib para criar arquivos
+    - Fez rodar fora do browser:
+        - Ryan Dahl: https://www.youtube.com/watch?v=hVqhStf-aDk
+
+
+## Configurando o Babel
+## Primeiro
+- Cria o package.json
+
+> npm init 
+> Aperta enter até terminar
+
+
+## Instala os pacotes do babel
+1 - Roda esses comandos no terminal
+> npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+## Roda o comando para gerar a pasta dist
+> ./node_modules/.bin/babel src --out-dir dist --presets=@babel/env --copy-files
+> Neste momento, se a pasta já existir ela é sobreposta
+
+## Colocando o site no ar
+- Copia a pasta dist e cola no servidor
+3 - Para colocar o site no ar, suba a pasta "./dist"
