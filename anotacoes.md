@@ -143,3 +143,31 @@
 
 ## Dicas sobre Testes
 - Teste automatizado de fluxos do usuário: https://www.cypress.io/
+
+## Lugares para por o projeto no ar:
+- https://www.netlify.com/ (recomendo fortemente)
+- AWS (Roots)
+    - Alura fica na amazon
+- Digital Ocean (Forma mais feliz de mexer na amazon)
+- Heroku (SASS)
+- Google Cloud Services. (300 dolares de teste)
+    - Caelum fica aqui
+
+## não manjo de backend, o que fazer?
+- Back End as a Service
+    - https://firebase.google.com/?hl=pt-br
+    - https://www.back4app.com/
+    - Como criar uma API em [nome da linguagem do seu coração]
+- Métodos do HTTP:
+    - https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
+
+## Manjo de backend, e agora?
+- Documentação: https://swagger.io/
+- Publicando site com Node: https://code.lengstorf.com/deploy-nodejs-ssl-digitalocean/ 
+
+## Sou curioso de backend
+- https://github.com/marblejs/marble
+
+## Multiplataforma
+- Desktop: https://electronjs.org/
+- Mobile: https://cordova.apache.org/

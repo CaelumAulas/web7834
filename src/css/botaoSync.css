@@ -11,8 +11,12 @@
 }
 
 @keyframes rodaRodaJequiti {
+	from {
+		background: red;
+	}
 	to {
 		transform: rotate(180deg);
+		background: blue;
 	}
 }
 

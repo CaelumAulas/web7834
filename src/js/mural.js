@@ -2,6 +2,24 @@
 // Revealing Module Pattern
 ; (function () {
     "use strict";
+    // Esse é o problema: CORS (Cross Origin Ressource Sharing) (AJAX)
+    // Essa é a solução: JSONP
+    // JUQUERI RESOLVE FÁCIL
+    $.ajax({
+        url: 'http://ceep.herokuapp.com/cartoes/carregar?usuario=omariosouto',
+        type: 'GET',
+        dataType: 'jsonp',
+        success: function(dadosDoServer) {
+            console.log(dadosDoServer.cartoes)
+            dadosDoServer.cartoes.forEach(function(cartao) {
+                adicionaCartaoNoMural(cartao.conteudo, cartao.cor)
+            })
+        }
+    })
+    // http://ceep.herokuapp.com/cartoes/carregar?usuario=omariosouto
+
+
+
     // Força a declaração de variaveis
 
     let contador = 0
