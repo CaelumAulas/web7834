@@ -171,3 +171,7 @@
 ## Multiplataforma
 - Desktop: https://electronjs.org/
 - Mobile: https://cordova.apache.org/
+
+
+## JavaScript rodando no infinito e além (browsers obsoletos):
+- https://polyfill.io/v2/docs/features/

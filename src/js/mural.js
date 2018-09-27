@@ -6,7 +6,7 @@
     // Essa é a solução: JSONP
     // JUQUERI RESOLVE FÁCIL
     $.ajax({
-        url: 'http://ceep.herokuapp.com/cartoes/carregar?usuario=omariosouto',
+        url: 'http://ceep.herokuapp.com/cartoes/carregar?usuario=omariasouto',
         type: 'GET',
         dataType: 'jsonp',
         success: function(dadosDoServer) {
@@ -14,9 +14,15 @@
             dadosDoServer.cartoes.forEach(function(cartao) {
                 adicionaCartaoNoMural(cartao.conteudo, cartao.cor)
             })
+        },
+        error: function() {
+
+        },
+        complete: function() {
+
         }
     })
-    // http://ceep.herokuapp.com/cartoes/carregar?usuario=omariosouto
+    // http://ceep.herokuapp.com/cartoes/carregar?usuario=omariasouto
 
 
 
@@ -74,10 +80,20 @@
             // classList.add (Js Puro) vira addClass (Juqueri)            
             cartao.addClass('cartao--focado')
         })
-        cartao.on('focusout', function () {
+        cartao.on('focusout', function (evento) {
             // console.log('desfocamos do cartao')
             cartao.removeClass('cartao--focado')
+
+            const elementoAlvoDoFocusOut = evento.target
+            const isConteudo=elementoAlvoDoFocusOut.classList.contains('cartao-conteudo')
+            if(isConteudo) {
+                sincronizar()
+            }
         })
+        
+        // cartao.find('.cartao-conteudo').on('focusout', sincronizar)
+
+
         cartao.on('change', function (infosDoEventoDisparado) {
             // Design Pattern: Delegate
             const elementoClicado = infosDoEventoDisparado.target
@@ -92,6 +108,7 @@
             if (isRadioTipo) {
                 const corNovaDoCartao = elementoClicado.getAttribute('value')
                 cartao.css('background-color', corNovaDoCartao)
+                sincronizar()
                 // cartao.style.backgroundColor = corNovaDoCartao
             }
         })
@@ -125,6 +142,7 @@
                 // excluir o cartao da tela
                 cartao.on('transitionend', function () {
                     cartao.remove()
+                    sincronizar()
                 })
             }
         })
@@ -134,6 +152,8 @@
 
 
     }
+
+
 
 
 })()

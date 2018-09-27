@@ -29,6 +29,7 @@ form.addEventListener('submit', function(infosDoEvento) {
         })
     } else {
         adicionaCartaoNoMural(valorDoTextArea)
+        sincronizar()
     }
     document.querySelector('.formNovoCartao-conteudo').value = ''
 })

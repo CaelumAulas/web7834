@@ -3,13 +3,18 @@
     
     const btnSync = $("#btnSync")
     
-    
-    btnSync.on('click', function() {
+    // # Forçar atualizão quando:
+    // - Clicar no remover: OK
+    // - Mudar cor: ok
+    // - E quando criar um cartão novo : 
+    // - Editar*: 
+
+    window.sincronizar = function() {
         btnSync.removeClass('botaoSync--sincronizado')
         btnSync.addClass('botaoSync--esperando')
         
         const mural = {
-            usuario: "omariosouto",
+            usuario: "omariasouto",
             cartoes: Array.from(document.querySelectorAll('.cartao')).map(function(cartaoAtual){
                 const cor = getComputedStyle(cartaoAtual).getPropertyValue('background-color')
                 const texto = cartaoAtual.querySelector('.cartao-conteudo').textContent
@@ -41,9 +46,9 @@
         // Acessem:
         // http://ceep.herokuapp.com/cartoes/carregar?usuario=omariosouto
 
-    })
+    }
 
-
+    btnSync.on('click', sincronizar)
 
 
     btnSync.removeClass('no-js')
